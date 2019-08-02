@@ -1,0 +1,31 @@
+﻿@using ToDo.Entities
+@model List<Note>
+
+<table class="table">
+    <tr>
+        <th>
+            İşlem Tarihi
+        </th>
+        <th>
+            Kategori
+        </th>
+        <th>
+            Not Başlığı
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.CompletedOn
+            </td>
+            <td>
+                @item.Category.Title
+            </td>
+            <td>
+                @item.Title
+            </td>
+        </tr>
+    }
+</table>
